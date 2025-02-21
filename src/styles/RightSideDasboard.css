@@ -1,0 +1,324 @@
+.rightsidecontainer{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+.homework{
+    width: 84%;
+    height: 115px;
+    padding: 10px;
+}
+.homework h1{
+    font-size: 20px;
+    margin: 0;
+    margin-left: 10px;
+    font-weight: 600;
+    font-family: "Roboto", serif;
+}
+.maincontenthomework{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+.maincontenthomework h1{
+    font-size: 50px;
+}
+.progress-container {
+    margin-left: 18px;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.progress-ring {
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+}
+.trophy{
+    margin-left: 15px;
+    width: 100px;
+    height: 100px;
+}
+.lessons{
+    margin-top: 0px;
+    width: 84%;
+    height: 80px;
+    /* padding: 10px; */
+    margin-top: 10px;
+    display: flex;
+}
+.firstlesson{
+    width: 50%;
+    height: 120px;
+}
+.secondlesson{
+    width: 50%;
+    height: 120px;
+    margin-left: 15px;
+}
+.firstlesson h1{
+    font-size: 17px;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Roboto", serif;
+}
+.secondlesson h1{
+    font-size: 17px;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Roboto", serif;
+}
+.maincontentfirstlesson{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin-left: 10px;
+}
+.maincontentsecondlesson{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin-left: 10px;
+}
+.maincontentfirstlesson h1{
+    font-size: 30px;
+}
+.maincontentsecondlesson h1{
+    font-size: 30px;
+}
+.circular-progress {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(#4caf50 85%, #333 85% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.circular-progress::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background: white;
+    border-radius: 50%;
+}
+.progress-label {
+    position: absolute;
+}
+.progress-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.progress-ring-background {
+    cx: 40;
+    cy: 40;
+    r: 30;
+    stroke: #ddd;
+    stroke-width: 6;
+    fill: transparent;
+}
+
+.progress-ring-fill {
+    cx: 40;
+    cy: 40;
+    r: 30;
+    stroke: green;
+    stroke-width: 6;
+    fill: transparent;
+    stroke-dasharray: 188.4;
+    stroke-dashoffset: 28.26; /* Adjusted for 85% */
+    stroke-linecap: round;
+}
+
+.progress-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+}
+.bargraph{
+    margin-bottom: 28px;
+    width: 60px;
+    height:60px;
+    margin-left: 2px;
+}
+.calender{
+    margin-top: 50px;
+    width: 84%;
+    height: 190px;
+    padding: 10px;
+}
+.headingcalender{
+    display: flex;
+    justify-content: space-between;
+}
+.headingcalender h1{
+    margin: 0;
+    font-size: 20px;
+}
+.headingcalender p{
+    margin: 0;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.event{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.event1{
+    width: 94%;
+    height: 60px;
+    background-color: #dddddd;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.event2{
+    margin-top: 10px;
+    width: 94%;
+    height: 60px;
+    background-color: #dddddd;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.colur1{
+    background-color: #4caf50;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.colur2{
+    background-color: #f43636;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.AI{
+    margin-left: 10px;
+    font-weight: 550;
+}
+.eventdate{
+    margin-left: 38px;
+    color: #333;
+}
+.project{
+    margin-left: 10px;
+    font-weight: 550;
+}
+.assignments{
+    margin-top: 10px;
+    width: 84%;
+    height: 193px;
+    padding: 7px;
+}
+.headingassignments{
+    display: flex;
+    justify-content: space-between;
+}
+.headingassignments h1{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.headingassignments p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #e3e3e3;
+    width: 80px;
+    text-align: center;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.headingassignments p:hover{
+    scale: 1.04;
+    transition: transform 0.3s ease-in-out;
+    color: #ff9800;
+}
+h4{
+    margin: 0;
+    font-weight: 450;
+    color: #515151dd;
+}
+.todotasks{
+    display: flex;
+    align-items: center;
+}
+.fa-ellipsis-vertical{
+    cursor: pointer;
+}
+.fa-ellipsis-vertical:hover{
+    color: #ff9800;
+    scale: 1.05;
+    transition: transform 0.3s ease-in-out;
+}
+.todotasks p{
+    margin: 0;
+    margin-top: 10px;
+}
+.fa-clipboard{
+    font-size: 42px;
+    color: #3a18d1;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.taskname{
+    margin-left: 10px;
+    /* margin-top: 5px; */
+    /* font-weight: 500; */
+}
+.taskname p{
+    margin: 0;
+}
+.deadline{
+    margin-left:50px;
+}
+.textdeadline{
+    margin-left: 7px !important;
+    font-size: 15px;
+    font-weight: 450;
+    color: #333;
+}
+.computer{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.fa-clock{
+    /* font-size: 20px; */
+    color: #2196f3;
+}
+.fa-circle-check{
+    color: #4caf50;
+    font-size: 40px;
+    margin-top: -10px;
+}
