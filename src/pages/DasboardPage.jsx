@@ -124,8 +124,8 @@ export default function DasboardPage() {
               <p className="aboutname">About</p></div>
                 <div className="secondcolumn">
                   <p>Date</p>
-                  <p>View</p>
-                  <p>Action</p>
+                  <p className="view">View</p>
+                  <p className="action">Action</p>
                 </div>
             </div>
             <div className="listofnotice">
@@ -149,19 +149,19 @@ export default function DasboardPage() {
                     <div className="line"></div>
                     <div className="secondrownotice">
                     <div className="noabout">
-                      <p className="z">02</p>
+                      <p className="z">01</p>
                       <div className="about">
                         <div className="imgabout"><img src={Sports} alt="" className="books" /></div>
                         <div className="textabout">
-                        <p className="testexam">Anual sports</p>
+                        <p className="testexam anual">Anual sports</p>
                         <p className="testexamination" >Anual sports day on 13th april</p>
                         </div>
                       </div>
                       </div>
                       <div className="dateviewaction">
-                        <p className="date">13 April , 2025</p>
-                        <p className="views2">3k</p>
-                        <p className="dot2"><i className="fa-solid fa-ellipsis-vertical"></i></p>
+                        <p className="date">13 May , 2025</p>
+                        <p className="views">3k</p>
+                        <p className="dot"><i className="fa-solid fa-ellipsis-vertical"></i></p>
                       </div>
                     </div>
                     

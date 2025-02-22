@@ -205,8 +205,8 @@ function ToolbarActionsSearch() {
     document.getElementById("event1").style.backgroundColor = click ? "#121f3d" : "#dddddd";
     document.getElementById("event2").style.backgroundColor = click ? "#121f3d" : "#dddddd";
     document.getElementById("view").style.backgroundColor = click ? "#121f3d" : "#e3e3e3";
-    document.getElementById("textdeadline").style.color = click ? "white" : "#ddd";
-    document.getElementById("textdeadline2").style.color = click ? "white" : "#ddd";
+    document.getElementById("textdeadline").style.color = click ? "white" : "#333";
+    document.getElementById("textdeadline2").style.color = click ? "white" : "#333";
   }, [click]); 
   
   function Themswitcher() {
@@ -218,15 +218,15 @@ function ToolbarActionsSearch() {
 
     return (
     <Stack direction="row" alignItems="center" >
-      <IconButton sx={{ color: "#23a648", mr: 2 }}>
-        <NotificationsIcon />
+      <IconButton sx={{ color: "#23a648", mr:{lg:2,md:0,xs:0}  }}>
+        <NotificationsIcon sx={{display:{xs:"none",md:"block",lg:"block"}}} />
       </IconButton>
       <IconButton
         onClick={handleOpen}
-        sx={{ color: "#23a648", mr: 3 }}
+        sx={{ color: "#23a648", mr: {lg:3,md:2} }}
         aria-describedby={popoverId}
       >
-        <SettingsIcon />
+        <SettingsIcon sx={{fontSize:{xs:"18.1px",md:"25px",lg:"25px"}}} />
       </IconButton>
       <Popover
         id={popoverId}
@@ -270,14 +270,16 @@ function CustomAppTitle() {
     <>
       <Stack direction="row" alignItems="center" spacing={2}>
         <i className="fa-solid fa-book-open-reader"></i>
-        <Typography variant="h6" sx={{ fontSize: "22px", fontWeight: "550" }}>
+        <Typography variant="h6" sx={{fontSize: { xs: "0px", sm: "18px", md: "16px", lg: "24px" ,},
+             display: { xs:"none",sm: "block",md: "block", lg: "block" },
+        fontWeight: "550"  }} >
           Student Dashboard
         </Typography>
       </Stack>
       <Stack direction="row" alignItems="center">
         <Typography
           variant="h6"
-          sx={{ fontSize: "22px", fontWeight: "550", marginLeft: "30px" }}
+          sx={{fontSize: { xs: "13px", sm: "18px", md: "16px", lg: "22px" }, fontWeight: "550", marginLeft: {lg:"30px",xs:"10px"} }}
         >
           Welcome Back, <span className="studentname">Student</span>{" "}
         </Typography>
@@ -288,9 +290,13 @@ function CustomAppTitle() {
               aria-label="search"
               sx={{
                 display: { xs: "inline", md: "none" },
+                fontSize: { xs: "10px", sm: "18px", md: "16"}
               }}
             >
-              <SearchIcon />
+              <SearchIcon sx={{
+                fontSize: { xs: "18px", sm: "18px", md: "16px",lg:"25px"},
+                  ml: { xs: "6px"},
+              }}/>
             </IconButton>
           </div>
         </Tooltip>
@@ -304,7 +310,7 @@ function CustomAppTitle() {
             endAdornment: (
               <IconButton type="button" aria-label="search" size="small">
                 <SearchIcon
-                  sx={{ color: "green", "&:hover": { color: "#23a648" } }}
+                  sx={{ color: "green", "&:hover": { color: "#23a648" }}}
                 />
               </IconButton>
             ),
@@ -315,8 +321,8 @@ function CustomAppTitle() {
           }}
           sx={{
             display: { xs: "none", md: "inline-block" },
-            width: "450px",
-            ml: 10,
+            width: { xs: "10px", sm: "10px", md: "120px", lg: "450px" },
+            ml:{xs:0,sm:0,md:2  ,lg:10}
           }}
         />
       </Stack>

@@ -101,12 +101,13 @@ export default function RightSideDasboard() {
                         <p><i class="fa-sharp fa-solid fa-circle-check"></i></p>
                         <div className="taskname">
                             <p className="computer">Stock Price Prediction</p>
-                            <p className="textdeadline" id="textdeadline2"><i class="fa-regular fa-clock"></i>Deadline     <span className="deadline"> 16 May 2025 ,3:00pm</span></p>
+                            <p className="textdeadline" id="textdeadline2"><i class="fa-regular fa-clock"></i>Deadline     <span className="deadline2"> 16 May 2025 ,3:00pm</span></p>
                         </div>
                     </div>
                 </div>
                 </div>
             </div>
+            <div className="empty"></div>
       </Paper>
     </div>
   );

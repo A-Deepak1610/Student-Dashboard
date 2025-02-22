@@ -206,6 +206,13 @@
     height: 13px;
     font-size: 18px;
 }
+.testexam2{
+    margin: 0;
+    margin-top:12px;
+    height: 13px;
+    /* font-size: 10px; */
+    /* font-weight:: */
+}
 .testexamination{
     /* margin-right: 10px; */
     margin: 0;
@@ -215,6 +222,13 @@
     font-weight: 500;
 }
 .books{
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+.sports{
     margin-top: 10px;
     height: 40px;
     width: 40px;
@@ -261,4 +275,107 @@
 }
 .dot2{
     margin-left: 120px;
+}
+.testexam2{
+    width: 100px;
+    font-size: 14px;
+    font-weight: 460;
+    margin-top: px;
+}
+@media screen and  (max-width:400px) {
+    .main-container{
+        display: block;
+    }
+    .primary{
+        width:95%;
+    }
+    .first,.second,.third,.fourth{
+        display: flex;
+        justify-content: space-around;
+        background-color: #edeffc;
+        border-radius: 15px;
+        align-items: center;
+        width: 90%;
+        font-weight: 600;
+        font-family: "Roboto", serif;
+        height: 55px;
+        font-size: 12.5px;
+    }
+    .inprogeress{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 35px;
+        background-color: #ffc208;
+        border-radius: 25px;
+    }
+    .Pending{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 35px;
+        background-color: #2196f3;
+        border-radius: 25px;
+    }
+    .Completed{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 35px;
+        background-color: #4cb050;
+        border-radius: 25px;
+    }
+    .action{
+        display: none !important;
+    }
+    .view{
+        display: none !important;
+    }
+    .aboutname{
+        margin-left: 55px;
+    }
+    .secondcolumn p{
+        margin-left: 25px;
+    }
+    .firstrownotice{
+        margin-top: 20px;
+    }
+    .books{
+        margin-left: 18px;
+    }
+    .views ,.dot,.views2,.dot2{
+        display: none !important;
+    }
+    .testexamination{
+        font-size: 10px;
+        display: none !important;
+    }
+    .testexam{
+        font-size: 17px;
+        width: 90px;
+        margin-top: -16px;
+    }
+    .date{
+        width: 95px;
+        font-size: 15px;
+        margin-left:45px;
+    }
+    .testexam2{
+        width: 100px;
+        font-size: 14px;
+        font-weight: 460;
+        margin-top: 9px;
+    }
+    .secondary{
+        width: 100%;
+    }
+
+    .anual{
+        font-size: 15.5px;
+        margin-top: -10px;
+        font-weight: 450;
+    }
 }

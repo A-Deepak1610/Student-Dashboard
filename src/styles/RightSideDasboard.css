@@ -300,7 +300,7 @@ h4{
 .taskname p{
     margin: 0;
 }
-.deadline{
+.deadline,.deadline2{
     margin-left:50px;
 }
 .textdeadline{
@@ -321,4 +321,86 @@ h4{
     color: #4caf50;
     font-size: 40px;
     margin-top: -10px;
+}
+.empty{
+    display: none ;
+}
+@media screen and  (max-width:400px) {
+    .homework{
+        margin-right:15px; 
+         width:95%;
+         margin-top: 10px;
+    }
+    .homework h1{
+        font-size: 16px;
+    }
+    .lessons{
+        width: 100%;
+    }
+    .firstlesson{
+        width: 45%;
+        padding: 0;
+    }
+    .secondlesson{
+        width: 45%;
+        margin-left: 4.5%;
+        padding: 0;
+    }
+    .firstlesson h1{
+        font-size: 13.5px;
+    }
+    .secondlesson h1{
+        font-size: 13.5px;
+    } 
+    .calender{
+        margin-right: 15px;
+        width: 95%;
+    }
+    .colur1{
+        width: 25px;
+        height: 25px;
+    }
+    .colur2{
+        width: 25px;
+        height: 25px;
+    }
+    .AI{
+        font-size: 15px;
+    }
+    .project{
+        font-size: 15px;
+    }
+    .eventdate{
+        margin-left: 20px;
+        font-size: 14px;
+        font-weight: 450;
+    }
+    .assignments{
+        margin-right:15px; 
+        width:95%;
+    }
+    .fa-clipboard{
+        font-size: 35px;
+    }
+    .computer{
+        font-size: 16px;
+    }
+    .deadline{
+        margin-left: 20px;
+    }
+    .deadline2{
+        margin-left: 8px;
+    }
+    .fa-circle-check{
+        font-size: 35px;
+    }
+    .empty{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+        height: 20px;
+    }
+
 }

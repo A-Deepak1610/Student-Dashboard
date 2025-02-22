@@ -26,8 +26,13 @@
 .bodysidebar{
   background-color: #f5f5f5;
 }
-@media (prefers-color-scheme: dark) {
-  .bodysidebar {
-    background-color: black !important;
+@media  screen and  (max-width: 1030px){
+  .fa-book-open-reader{
+    font-size:20px;
+  }
+}
+@media  screen and  (max-width:400px){
+  .usericon{
+    display: none;
   }
 }
