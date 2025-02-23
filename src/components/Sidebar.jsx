@@ -32,7 +32,6 @@ import Attendence from "../pages/Attendence";
 import Notes from "../pages/Notes";
 import Signout from "../pages/Signout";
 import { useDemoRouter } from "@toolpad/core/internal";
-
 const NAVIGATION = [
   {
     kind: "header",
@@ -117,7 +116,6 @@ const demoTheme = createTheme({
     },
   },
 });
-
 function DemoPageContent({ pathname }) {
   if (pathname === "/dashboard") {
     return (
@@ -175,6 +173,7 @@ DemoPageContent.propTypes = {
 };
 
 function ToolbarActionsSearch() {
+  const theme = useTheme(); 
   const [anchorEl, setAnchorEl] = useState(null);
   const handleOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -186,35 +185,49 @@ function ToolbarActionsSearch() {
   const open = Boolean(anchorEl);
   const popoverId = open ? "settings-popover" : undefined;
 
-  // Theme Switcher
-  // const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
-
-  // function Themswitcher() {
-  //   const newTheme = theme === 'light' ? 'dark' : 'light';
-  //   setTheme(newTheme);
-  //   localStorage.setItem('theme', newTheme);
-  //   document.getElementById("bodysidebar").setAttribute("data-toolpad-color-scheme", newTheme);
-  // }
   const [click, setClick] = useState(localStorage.getItem("click") === "false");
 
-  React.useEffect(() => {
-    document.getElementById("bodysidebar").style.backgroundColor = click ? "black" : "#f5f5f5";
-    document.getElementById("first").style.backgroundColor = click ? "#121f3d" : "#edeffc";
-    document.getElementById("second").style.backgroundColor = click ? "#121f3d" : "#edeffc";
-    document.getElementById("fourth").style.backgroundColor = click ? "#121f3d" : "#edeffc";
-    document.getElementById("event1").style.backgroundColor = click ? "#121f3d" : "#dddddd";
-    document.getElementById("event2").style.backgroundColor = click ? "#121f3d" : "#dddddd";
-    document.getElementById("view").style.backgroundColor = click ? "#121f3d" : "#e3e3e3";
-    document.getElementById("textdeadline").style.color = click ? "white" : "#333";
-    document.getElementById("textdeadline2").style.color = click ? "white" : "#333";
-  }, [click]); 
-  
+  // React.useEffect(() => {
+  //   document.getElementById("bodysidebar").style.backgroundColor = click ? "black" : "#f5f5f5";
+  //   document.getElementById("first").style.backgroundColor = click ? "#121f3d" : "#edeffc";
+  //   document.getElementById("second").style.backgroundColor = click ? "#121f3d" : "#edeffc";
+  //   document.getElementById("fourth").style.backgroundColor = click ? "#121f3d" : "#edeffc";
+  //   document.getElementById("event1").style.backgroundColor = click ? "#121f3d" : "#dddddd";
+  //   document.getElementById("event2").style.backgroundColor = click ? "#121f3d" : "#dddddd";
+  //   document.getElementById("view").style.backgroundColor = click ? "#121f3d" : "#e3e3e3";
+  //   document.getElementById("textdeadline").style.color = click ? "white" : "#333";
+  //   document.getElementById("textdeadline2").style.color = click ? "white" : "#333";
+  // }, [click]); 
+  // function Themswitcher() {
+  //   const newClick = !click;
+  //   setClick(newClick);
+  //   localStorage.setItem("click", newClick);
+  // }
   function Themswitcher() {
-    const newClick = !click;
-    setClick(newClick);
-    localStorage.setItem("click", newClick);
+    if (theme.palette.mode === "light") {
+      console.log("dark")
+      document.getElementById("bodysidebar").style.backgroundColor = "black" 
+      document.getElementById("first").style.backgroundColor = "#121f3d"
+      document.getElementById("second").style.backgroundColor =  "#121f3d" 
+      document.getElementById("fourth").style.backgroundColor =  "#121f3d" 
+      document.getElementById("event1").style.backgroundColor =  "#121f3d" 
+      document.getElementById("event2").style.backgroundColor = "#121f3d" 
+      document.getElementById("view").style.backgroundColor =  "#121f3d" 
+      document.getElementById("textdeadline").style.color = "white" 
+      document.getElementById("textdeadline2").style.color = "white" 
+    } else if(theme.palette.mode==="dark") {
+      console.log("light")
+      document.getElementById("bodysidebar").style.backgroundColor =  "#f5f5f5";
+      document.getElementById("first").style.backgroundColor = "#edeffc";
+      document.getElementById("second").style.backgroundColor =  "#edeffc";
+      document.getElementById("fourth").style.backgroundColor ="#edeffc";
+      document.getElementById("event1").style.backgroundColor =  "#dddddd";
+      document.getElementById("event2").style.backgroundColor =  "#dddddd";
+      document.getElementById("view").style.backgroundColor =  "#e3e3e3";
+      document.getElementById("textdeadline").style.color = "#333";
+      document.getElementById("textdeadline2").style.color =  "#333";
+    }
   }
-  
 
     return (
     <Stack direction="row" alignItems="center" >
