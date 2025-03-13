@@ -116,7 +116,7 @@ const demoTheme = createTheme({
     },
   },
 });
-function DemoPageContent({ pathname }) {
+function PageContent({ pathname }) {
   if (pathname === "/dashboard") {
     return (
       <Box>
@@ -168,7 +168,7 @@ function DemoPageContent({ pathname }) {
   }
 }
 
-DemoPageContent.propTypes = {
+PageContent.propTypes = {
   pathname: PropTypes.string.isRequired,
 };
 
@@ -181,28 +181,8 @@ function ToolbarActionsSearch() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
   const open = Boolean(anchorEl);
   const popoverId = open ? "settings-popover" : undefined;
-
-  const [click, setClick] = useState(localStorage.getItem("click") === "false");
-
-  // React.useEffect(() => {
-  //   document.getElementById("bodysidebar").style.backgroundColor = click ? "black" : "#f5f5f5";
-  //   document.getElementById("first").style.backgroundColor = click ? "#121f3d" : "#edeffc";
-  //   document.getElementById("second").style.backgroundColor = click ? "#121f3d" : "#edeffc";
-  //   document.getElementById("fourth").style.backgroundColor = click ? "#121f3d" : "#edeffc";
-  //   document.getElementById("event1").style.backgroundColor = click ? "#121f3d" : "#dddddd";
-  //   document.getElementById("event2").style.backgroundColor = click ? "#121f3d" : "#dddddd";
-  //   document.getElementById("view").style.backgroundColor = click ? "#121f3d" : "#e3e3e3";
-  //   document.getElementById("textdeadline").style.color = click ? "white" : "#333";
-  //   document.getElementById("textdeadline2").style.color = click ? "white" : "#333";
-  // }, [click]); 
-  // function Themswitcher() {
-  //   const newClick = !click;
-  //   setClick(newClick);
-  //   localStorage.setItem("click", newClick);
-  // }
   function Themswitcher() {
     if (theme.palette.mode === "light") {
       console.log("dark")
@@ -228,7 +208,6 @@ function ToolbarActionsSearch() {
       document.getElementById("textdeadline2").style.color =  "#333";
     }
   }
-
     return (
     <Stack direction="row" alignItems="center" >
       <IconButton sx={{ color: "#23a648", mr:{lg:2,md:0,xs:0}  }}>
@@ -355,7 +334,7 @@ function DashboardLayoutSlots(props) {
             toolbarActions: ToolbarActionsSearch,
           }}
         >
-          <DemoPageContent pathname={router.pathname} />
+          <PageContent pathname={router.pathname} />
         </DashboardLayout>
       </AppProvider>
     </div>
